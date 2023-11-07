@@ -1,0 +1,57 @@
+@keyframes rotate {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+  }
+  * { box-sizing: border-box; margin: 0 }
+  body {
+    font: 16px/1.5 Arial, sans-serif;
+    background: #f5f5f5;
+    color: #999;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body > div {
+    width: 100px; height: 100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 25px;
+  }
+  span {
+    display: block;
+    width: 100%; height: 100%;
+    background-size: cover;
+  }
+  span:first-child {
+    width: 100px; height: 100px;
+    position: absolute;
+    top: 0px; left: 50%;
+    margin-left: -50px;
+    z-index: -1;
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+ICAgIDxwYXRoIGZpbGw9IiNjY2MiIGQ9Ik0yIDlIMHY1bDEuNS0xLjRDMyAxNC42IDUuMyAxNiA4IDE2YzQgMCA3LjQtMyA4LTdoLTJjLS42IDIuOC0zIDUtNiA1LTIgMC00LTEtNS0yLjdMNS40IDlIMnpNOCAwQzQgMCAuNiAzIDAgN2gyYy42LTIuOCAzLTUgNi01IDIuMiAwIDQgMS4yIDUgM2wtMiAyaDVWMmwtMS40IDEuNEMxMyAxLjQgMTAuNiAwIDggMHoiLz48L3N2Zz4=) no-repeat 50% 50%;
+  }
+  span:last-child {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4gIDxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik00MDAuMyAzOTkuNGMtMTMuNiAxMi44LTEzLjYgMzQgMCA0Ny43IDYuOCA3IDE1LjQgMTEgMjQgMTFzMTctMyAyMy44LTEwYzE0LTEyLjMgMTQtMzQgMC00Ny4yLTEyLTEzLjctMzQtMTMuNy00NyAwem0zNiAzNi43Yy03IDctMTcuMiA3LTI0IDBzLTctMTcgMC0yM2MzLjQtMyA3LjYtNSAxMi01czguNCAyIDEyIDUuNmM2LjcgNi44IDYuNyAxNyAwIDI0eiIvPiAgPHBhdGggZmlsbD0iIzY2NiIgZD0iTTUwNiA0MDkuNkwzNTIuNiAyNTZsNjAuNi02MC42IDM2LTM1LjggNTItNTJjMTQuNS0xNC42IDE0LjUtMzguNSAwLTUzTDQ1Ny41IDExQzQ1MC43IDQuNCA0NDEuMyAwIDQzMSAwcy0xOS42IDQuMy0yNi40IDExbC01MiA1Mi0zNiAzNi02MC41IDYwLjYtMTUxLTE1MmMtOS05LjMtMjYtOS4zLTM2IDBMOCA2OC40Qy0yLjUgNzcuNy0yLjUgOTQgNy44IDEwNGwxOCAxOCA0OC41IDQ4LjcgNDcuOCA0Ny44IDM4IDM3LjVMMjMgMzkzYy0yLjYgMS00IDMuNC00LjcgNi40TDAgNTAxLjhjMCAzLjQgMSA2IDIuNyA3LjYgMS43IDEuNyAzLjQgMi42IDYgMi42aDEuNmw5OC41LTE4LjJjLjcuMiAxLjQuMyAyLjIuMyAyLjYgMCA1LjIgMCA2LTJsMTM5LTEzOSAxMS4yIDExIDI0IDI0IDExOC40IDExOGM0LjMgNSA5LjQgNiAxNC41IDZzMTEtMSAxNC02bDY4LTY4YzgtNyA4LTIwIDAtMjh6bS0zOTUgNjNMODEuMiA0NDMgMzY1IDE2MGwyOS4zIDI5LjRMMTExIDQ3Mi43ek00MTYuNSAyM2M3LjctNy42IDIxLjQtNy42IDI5IDBMNDg5IDY2LjZjNy43IDcuNiA3LjcgMjEuMyAwIDI5bC00NiA0NkwzNzAuNSA2OWw0Ni00NnptLTU4IDU4bDM2LjMgMzYuMyAzNi4yIDM2LjMtMjQgMjQtNzIuNC03Mi42IDI0LTI0em0tMTk0IDE1NmwxOC4yLTE4LjNjMy40LTMuNSAzLjQtOC42IDAtMTJzLTguNS0zLjQtMTIgMEwxNTIuNSAyMjUgMTQwIDIxMi40bDMwLTMwYzMuMy0zLjMgMy4zLTguNCAwLTExLjhzLTguNi0zLjQtMTIgMGwtMzAgMjkuOC0xMS44LTEyIDE4LTE3LjhjMy4zLTMuNCAzLjMtOC42IDAtMTJzLTguNy0zLjQtMTIgMGwtMTggMTgtMTItMTIgMzAtMzBjMy4zLTMuMyAzLjMtOC40IDAtMTEuOHMtOC42LTMuNS0xMiAwbC0zMCAyOS43TDY3LjYgMTQwbDE4LTE4YzMuNC0zLjQgMy40LTguNSAwLTEycy04LjYtMy4zLTEyIDBsLTE4IDE4LTEyLTEyIDMwLTI5LjhjMy40LTMuNCAzLjQtOC41IDAtMTJzLTguNS0zLjQtMTIgMGwtMjkuOCAzMC0xMi0xMmMtMy40LTMuNS0zLjQtOC42IDAtMTJsNjAuNi02MC42YzEuNy0xLjcgMy40LTIuNSA2LTIuNSAxLjcgMCA0LjMgMSA2IDNsMTUyIDE1Mi03Mi43IDczLTcuMi03em0xNTguMi0xMTlsMjkuOCAyOS44LTI4My43IDI4M0wzOS40IDQwMWwyODMuMy0yODN6TTMyLjUgNDE4bDI4IDI4Yy41IDEgMSAyIDIgM0w5MyA0NzkuNmwtNzMuNSAxMi43IDEzLTc0LjN6bTQ2MS43IDcuOEw0MjYgNDk0Yy0xIDEtMy41IDEtNC4zIDBsLTg4LjQtODggMzAuMy0zMC4zYzMuNC0zLjQgMy40LTguNiAwLTEyLTMuNC0zLjQtOC41LTMuNC0xMiAwTDMyMS40IDM5NCAzMDkgMzgxLjZsMTgtMThjMy4zLTMuMyAzLjMtOC40IDAtMTEuOC0zLjUtMy40LTguNi0zLjQtMTIgMGwtMTggMTgtMTItMTIgMzAtMzBjMy40LTMuMyAzLjQtOC41IDAtMTItMy40LTMuMy04LjUtMy4zLTEyIDBsLTI5LjggMzAtNS01IDcyLjQtNzIuNyAxNTMuNiAxNTRjLjggMSAuOCA0IDAgNXoiLz48L3N2Zz4=) no-repeat 50% 50%;
+  }
+  
+  .btn-regresar{
+    background: #e03a3c;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 680px;
+    width: 150px;
+  }
+  
